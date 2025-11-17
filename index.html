@@ -81,9 +81,11 @@
         .table-striped tbody tr:nth-child(even) {
             background-color: #f9fbfd;
         }
-        .link{
+
+        .link {
             color: white;
         }
+
     </style>
 </head>
 
@@ -93,10 +95,11 @@
         <h1>Você cuida do sorriso. O <span style="color:#ffcc00;">OdontoIA</span> cuida da sua clínica.</h1>
         <p>Tudo que você precisa para a clínica render mais: agenda organizada, finanças sob controle e menos faltas —
             de forma simples e inteligente.</p>
-        <a href="https://app.odontoia.codertec.com.br/registrar_teste/"  class="btn btn-primary btn-lg mt-3" target="_blank">🚀 Teste grátis por 7 dias</a>
+        <a href="https://app.odontoia.codertec.com.br/registrar_teste/" class="btn btn-primary btn-lg mt-3"
+            target="_blank">🚀 Teste grátis por 7 dias</a>
         <button class="btn btn-outline-light btn-lg ms-2 mt-3" data-bs-toggle="modal" data-bs-target="#demoModal">
-  ▶️ Ver demonstração
-</button>
+            ▶️ Ver demonstração
+        </button>
 
     </header>
 
@@ -141,21 +144,23 @@
                         <h3>R$49/mês</h3>
                         <p>Agenda e pacientes</p>
                         <p>Ideal para 1 dentista</p>
-                        <a href="{% url 'clinic:checkout_basico' %}" class="btn btn-primary">Assinar</a>
-                      
+                        <a href="https://app.odontoia.codertec.com.br/checkout/basico/"
+                            class="btn btn-primary" target="_blank" , rel="noopener noreferrer">Assinar</a>
+
                     </div>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="card shadow-sm border-warning">
                     <div class="card-header bg-warning text-dark">
-                        <h4>Profissional</h4>    
+                        <h4>Profissional</h4>
                     </div>
                     <div class="card-body">
                         <h3>R$79/mês</h3>
                         <p>+ Relatórios e WhatsApp</p>
                         <p>Clínicas até 4 dentistas</p>
-                        <a href="https://app.odontoia.codertec.com.br/registrar-teste/" target=_blank class="btn btn-warning text-white">Assinar</a>
+                        <a href="https://app.odontoia.codertec.com.br/checkout/profissional/" target="_blank"
+                            rel="noopener noreferrer" class="btn btn-warning text-white">Assinar</a>
                     </div>
                 </div>
             </div>
@@ -168,7 +173,8 @@
                         <h3>R$129/mês</h3>
                         <p>+ IA e Multiusuário</p>
                         <p>Clínicas grandes</p>
-                        <a href="https://app.odontoia.codertec.com.br/registrar-teste/" target=_blank class="btn btn-dark">Assinar</a>
+                        <a href="https://app.odontoia.codertec.com.br/checkout/premium/" target=_blank
+                            rel="noopener noreferrer" class="btn btn-dark">Assinar</a>
                     </div>
                 </div>
             </div>
@@ -183,6 +189,7 @@
                 <thead>
                     <tr>
                         <th>Funcionalidade</th>
+                        <th>Trial</th>
                         <th>Básico</th>
                         <th>Profissional</th>
                         <th>Premium</th>
@@ -194,15 +201,18 @@
                         <td>✅</td>
                         <td>✅</td>
                         <td>✅</td>
+                        <td>✅</td>
                     </tr>
                     <tr>
                         <td>Dashboard financeiro</td>
-                        <td>✅</td>
+                        <td>❌</td>
+                        <td>❌</td>
                         <td>✅</td>
                         <td>✅</td>
                     </tr>
                     <tr>
                         <td>Comissões automáticas por dentista</td>
+                        <td>❌</td>
                         <td>❌</td>
                         <td>✅</td>
                         <td>✅</td>
@@ -210,11 +220,13 @@
                     <tr>
                         <td>Relatórios e exportações (Excel/PDF)</td>
                         <td>❌</td>
+                        <td>❌</td>
                         <td>✅</td>
                         <td>✅</td>
                     </tr>
                     <tr>
                         <td>Filtro por dentista e período</td>
+                        <td>❌</td>
                         <td>✅</td>
                         <td>✅</td>
                         <td>✅</td>
@@ -222,24 +234,28 @@
                     <tr>
                         <td>Prontuário odontológico digital</td>
                         <td>❌</td>
-                        <td>✅</td>
-                        <td>✅</td>
+                        <td>✅<br>(simples)</td>
+                        <td>✅<br>(completo)</td>
+                        <td>✅<br>(completo + IA)</td>
                     </tr>
                     <tr>
                         <td>Lembretes automáticos (WhatsApp)</td>
                         <td>❌</td>
-                        <td>✅</td>
-                        <td>✅</td>
-                    </tr>
-                    <tr>
-                        <td>Multiusuário (secretária/dentista/admin)</td>
                         <td>❌</td>
                         <td>✅</td>
                         <td>✅</td>
                     </tr>
                     <tr>
+                        <td>Multiusuário (secretária/dentistas)</td>
+                        <td>❌</td>
+                        <td>❌</td>
+                        <td>✅<br>(até 3)</td>
+                        <td>✅<br>(ilimitado)</td>
+                    </tr>
+                    <tr>
                         <td>Faturamento e lucros detalhados</td>
-                        <td>✅</td>
+                        <td>❌</td>
+                        <td>❌</td>
                         <td>✅</td>
                         <td>✅</td>
                     </tr>
@@ -247,19 +263,15 @@
                         <td>IA preditiva e insights automáticos</td>
                         <td>❌</td>
                         <td>❌</td>
+                        <td>❌</td>
                         <td>✅</td>
                     </tr>
                     <tr>
                         <td>Suporte prioritário</td>
                         <td>❌</td>
+                        <td>❌</td>
                         <td>✅</td>
                         <td>✅</td>
-                    </tr>
-                    <tr>
-                        <td>Cirurgiões-dentistas incluídos</td>
-                        <td><strong>1</strong></td>
-                        <td><strong>até 3</strong></td>
-                        <td><strong>Ilimitado</strong></td>
                     </tr>
                 </tbody>
             </table>
@@ -283,13 +295,35 @@
             </div>
         </div>
     </div>
-
+   
     <!-- CTA FINAL -->
     <section class="text-center bg-primary text-white py-5 mt-5">
         <h2>Pronto para transformar sua clínica?</h2>
         <p>Teste grátis por 7 dias. Sem cartão de crédito.</p>
-        <a href="https://app.odontoia.codertec.com.br/registrar_teste/" target="_blank" class="btn btn-light btn-lg mt-2">Criar minha conta grátis</a>
+        <a href="https://app.odontoia.codertec.com.br/registrar_teste/" target="_blank"
+            class="btn btn-light btn-lg mt-2">Criar minha conta grátis</a>
     </section>
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <!-- FORMULÁRIO DE CONTATO -->
     <section class="container mt-5 mb-5">
@@ -321,7 +355,8 @@
 
     <!-- RODAPÉ -->
     <footer>
-        <p>© 2025 OdontoIA • Desenvolvido por <a href="https://codertec.com.br" class="link" target="_blank"><strong>Codertec</strong></a></p>
+        <p>© 2025 OdontoIA • Desenvolvido por <a href="https://codertec.com.br" class="link"
+                target="_blank"><strong>Codertec</strong></a></p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
